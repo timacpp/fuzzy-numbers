@@ -6,7 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/tima/Coding/C&C++/fuzzy-numbers/main.cpp
-iostream
+/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzyNum.cpp
+FuzzyNum.h
+/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzyNum.h
+
+/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzyNum.h
+
+/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzySet.cpp
+FuzzySet.h
+/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzySet.h
+
+/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzySet.h
+FuzzyNum.h
+/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzyNum.h
+unordered_set
+-
+initializer_list
 -
 

@@ -66,30 +66,60 @@ include CMakeFiles/fuzzy.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/fuzzy.dir/flags.make
 
-CMakeFiles/fuzzy.dir/main.cpp.o: CMakeFiles/fuzzy.dir/flags.make
-CMakeFiles/fuzzy.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fuzzy.dir/main.cpp.o"
-	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fuzzy.dir/main.cpp.o -c "/home/tima/Coding/C&C++/fuzzy-numbers/main.cpp"
+CMakeFiles/fuzzy.dir/src/main.cpp.o: CMakeFiles/fuzzy.dir/flags.make
+CMakeFiles/fuzzy.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fuzzy.dir/src/main.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fuzzy.dir/src/main.cpp.o -c "/home/tima/Coding/C&C++/fuzzy-numbers/src/main.cpp"
 
-CMakeFiles/fuzzy.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fuzzy.dir/main.cpp.i"
-	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/tima/Coding/C&C++/fuzzy-numbers/main.cpp" > CMakeFiles/fuzzy.dir/main.cpp.i
+CMakeFiles/fuzzy.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fuzzy.dir/src/main.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/tima/Coding/C&C++/fuzzy-numbers/src/main.cpp" > CMakeFiles/fuzzy.dir/src/main.cpp.i
 
-CMakeFiles/fuzzy.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fuzzy.dir/main.cpp.s"
-	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/tima/Coding/C&C++/fuzzy-numbers/main.cpp" -o CMakeFiles/fuzzy.dir/main.cpp.s
+CMakeFiles/fuzzy.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fuzzy.dir/src/main.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/tima/Coding/C&C++/fuzzy-numbers/src/main.cpp" -o CMakeFiles/fuzzy.dir/src/main.cpp.s
+
+CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.o: CMakeFiles/fuzzy.dir/flags.make
+CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.o: ../src/FuzzyNum.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.o -c "/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzyNum.cpp"
+
+CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzyNum.cpp" > CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.i
+
+CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzyNum.cpp" -o CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.s
+
+CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.o: CMakeFiles/fuzzy.dir/flags.make
+CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.o: ../src/FuzzySet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.o -c "/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzySet.cpp"
+
+CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzySet.cpp" > CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.i
+
+CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzySet.cpp" -o CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.s
 
 # Object files for target fuzzy
 fuzzy_OBJECTS = \
-"CMakeFiles/fuzzy.dir/main.cpp.o"
+"CMakeFiles/fuzzy.dir/src/main.cpp.o" \
+"CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.o" \
+"CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.o"
 
 # External object files for target fuzzy
 fuzzy_EXTERNAL_OBJECTS =
 
-fuzzy: CMakeFiles/fuzzy.dir/main.cpp.o
+fuzzy: CMakeFiles/fuzzy.dir/src/main.cpp.o
+fuzzy: CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.o
+fuzzy: CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.o
 fuzzy: CMakeFiles/fuzzy.dir/build.make
 fuzzy: CMakeFiles/fuzzy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable fuzzy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable fuzzy"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fuzzy.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

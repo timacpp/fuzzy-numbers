@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/fuzzy.dir/main.cpp.o"
+  "CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.o"
+  "CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.o"
+  "CMakeFiles/fuzzy.dir/src/main.cpp.o"
   "fuzzy"
   "fuzzy.pdb"
 )

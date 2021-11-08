@@ -82,7 +82,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/main.cpp">
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/FuzzyNum.cpp">
+			<Option target="fuzzy"/>
+		</Unit>
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/FuzzyNum.h">
+			<Option target="fuzzy"/>
+		</Unit>
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/FuzzySet.cpp">
+			<Option target="fuzzy"/>
+		</Unit>
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/FuzzySet.h">
+			<Option target="fuzzy"/>
+		</Unit>
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/main.cpp">
 			<Option target="fuzzy"/>
 		</Unit>
 		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/CMakeLists.txt">

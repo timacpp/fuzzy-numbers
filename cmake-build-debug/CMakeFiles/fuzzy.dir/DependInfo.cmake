@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/tima/Coding/C&C++/fuzzy-numbers/main.cpp" "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/fuzzy.dir/main.cpp.o"
+  "/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzyNum.cpp" "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.o"
+  "/home/tima/Coding/C&C++/fuzzy-numbers/src/FuzzySet.cpp" "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.o"
+  "/home/tima/Coding/C&C++/fuzzy-numbers/src/main.cpp" "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/fuzzy.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
