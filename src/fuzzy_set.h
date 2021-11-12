@@ -1,7 +1,7 @@
 #ifndef FUZZYSET_H
 #define FUZZYSET_H
 
-#include "FuzzyNum.h"
+#include "fuzzy_num.h"
 #include <unordered_set>
 #include <initializer_list>
 

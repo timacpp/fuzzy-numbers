@@ -1,4 +1,4 @@
-#include "FuzzySet.h"
+#include "fuzzy_set.h"
 
 TriFuzzyNumSet::TriFuzzyNumSet(const std::initializer_list<TriFuzzyNum>& list) {
     // TODO

@@ -13,8 +13,8 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 set(CMAKE_C_FLAGS "-std=c11 -Wall -Wextra")
 
-set(RELEASE_FILES src/main.cpp src/FuzzyNum.cpp src/FuzzyNum.h src/FuzzySet.cpp src/FuzzySet.h)
-set(TEST_FILES test/num_test.cpp src/FuzzyNum.cpp src/FuzzyNum.h src/FuzzySet.cpp src/FuzzySet.h)
+set(RELEASE_FILES src/main.cpp src/fuzzy_num.cpp src/fuzzy_num.h src/fuzzy_set.cpp src/fuzzy_set.h)
+set(TEST_FILES test/num_test.cpp src/fuzzy_num.cpp src/fuzzy_num.h src/fuzzy_set.cpp src/fuzzy_set.h)
 
 add_executable(fuzzy ${RELEASE_FILES})
 add_executable(test ${TEST_FILES})

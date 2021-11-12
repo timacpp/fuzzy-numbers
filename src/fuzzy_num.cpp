@@ -1,15 +1,16 @@
-#include "FuzzyNum.h"
+#include "fuzzy_num.h"
 
 constexpr TriFuzzyNum crisp_zero() {
     return {0, 0, 0};
 }
 
 constexpr TriFuzzyNum crisp_number(real_t v) {
-    return crisp_zero();
+    return {v, v, v};
 }
 
-constexpr TriFuzzyNum::TriFuzzyNum(real_t lower, real_t modal, real_t upper)
-    : lower{lower}, modal{modal}, upper{upper} {}
+constexpr TriFuzzyNum::TriFuzzyNum(real_t first, real_t second, real_t third) {
+    std::tie(lower, modal, upper) = std
+}
 
 TriFuzzyNum::TriFuzzyNum(const TriFuzzyNum& src) {
     // TODO
@@ -36,7 +37,7 @@ TriFuzzyNum TriFuzzyNum::rank() const {
 }
 
 TriFuzzyNum TriFuzzyNum::operator+(const TriFuzzyNum& other) const {
-    return crisp_zero();
+    return {lower + other.lower, modal + other.modal, upper + other.upper};
 }
 
 TriFuzzyNum TriFuzzyNum::operator+=(const TriFuzzyNum& other) {
@@ -44,7 +45,7 @@ TriFuzzyNum TriFuzzyNum::operator+=(const TriFuzzyNum& other) {
 }
 
 TriFuzzyNum TriFuzzyNum::operator-(const TriFuzzyNum& other) const {
-    return crisp_zero();
+    return {lower - other.lower, modal - other.modal, upper - other.upper};
 }
 
 TriFuzzyNum TriFuzzyNum::operator-=(const TriFuzzyNum& other) {
@@ -52,7 +53,7 @@ TriFuzzyNum TriFuzzyNum::operator-=(const TriFuzzyNum& other) {
 }
 
 TriFuzzyNum TriFuzzyNum::operator*(const TriFuzzyNum& other) const {
-    return crisp_zero();
+    return {lower * other.lower, modal * other.modal, upper * other.upper};
 }
 
 TriFuzzyNum TriFuzzyNum::operator*=(const TriFuzzyNum& other) {
