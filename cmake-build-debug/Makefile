@@ -31,6 +31,9 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -117,6 +120,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+#=============================================================================
 # Target rules for targets named fuzzy
 
 # Build rule for target.
@@ -134,6 +150,7 @@ src/FuzzyNum.o: src/FuzzyNum.cpp.o
 
 # target to build an object file
 src/FuzzyNum.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzyNum.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.o
 .PHONY : src/FuzzyNum.cpp.o
 
@@ -142,6 +159,7 @@ src/FuzzyNum.i: src/FuzzyNum.cpp.i
 
 # target to preprocess a source file
 src/FuzzyNum.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzyNum.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.i
 .PHONY : src/FuzzyNum.cpp.i
 
@@ -150,6 +168,7 @@ src/FuzzyNum.s: src/FuzzyNum.cpp.s
 
 # target to generate assembly for a file
 src/FuzzyNum.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzyNum.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.s
 .PHONY : src/FuzzyNum.cpp.s
 
@@ -158,6 +177,7 @@ src/FuzzySet.o: src/FuzzySet.cpp.o
 
 # target to build an object file
 src/FuzzySet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzySet.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.o
 .PHONY : src/FuzzySet.cpp.o
 
@@ -166,6 +186,7 @@ src/FuzzySet.i: src/FuzzySet.cpp.i
 
 # target to preprocess a source file
 src/FuzzySet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzySet.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.i
 .PHONY : src/FuzzySet.cpp.i
 
@@ -174,6 +195,7 @@ src/FuzzySet.s: src/FuzzySet.cpp.s
 
 # target to generate assembly for a file
 src/FuzzySet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzySet.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.s
 .PHONY : src/FuzzySet.cpp.s
 
@@ -201,6 +223,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+test/num_test.o: test/num_test.cpp.o
+.PHONY : test/num_test.o
+
+# target to build an object file
+test/num_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/num_test.cpp.o
+.PHONY : test/num_test.cpp.o
+
+test/num_test.i: test/num_test.cpp.i
+.PHONY : test/num_test.i
+
+# target to preprocess a source file
+test/num_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/num_test.cpp.i
+.PHONY : test/num_test.cpp.i
+
+test/num_test.s: test/num_test.cpp.s
+.PHONY : test/num_test.s
+
+# target to generate assembly for a file
+test/num_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/num_test.cpp.s
+.PHONY : test/num_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,6 +256,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... fuzzy"
+	@echo "... test"
 	@echo "... src/FuzzyNum.o"
 	@echo "... src/FuzzyNum.i"
 	@echo "... src/FuzzyNum.s"
@@ -219,6 +266,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... test/num_test.o"
+	@echo "... test/num_test.i"
+	@echo "... test/num_test.s"
 .PHONY : help
 
 
