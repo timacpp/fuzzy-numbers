@@ -12,9 +12,10 @@ set_property(GLOBAL PROPERTY RULE_MESSAGES OFF)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 set(CMAKE_C_FLAGS "-std=c11 -Wall -Wextra")
+add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 
 set(RELEASE_FILES src/main.cpp src/fuzzy_num.cc src/fuzzy_num.h src/fuzzy_set.cc src/fuzzy_set.h)
-set(TEST_FILES test/num_test.cpp src/fuzzy_num.cc src/fuzzy_num.h src/fuzzy_set.cc src/fuzzy_set.h)
+set(TEST_FILES test/num_test.cpp src/fuzzy_num.cc src/fuzzy_num.h)
 
 add_executable(fuzzy ${RELEASE_FILES})
 add_executable(test ${TEST_FILES})

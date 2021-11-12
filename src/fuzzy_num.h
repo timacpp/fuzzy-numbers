@@ -1,13 +1,17 @@
 #ifndef FUZZYNUM_H
 #define FUZZYNUM_H
 
+// TODO: merge fuzzy_num and fuzzy_set files into fuzzy.
+// TODO: constexpr and explicit
+// TODO: default copy constructor or not?
+
 using real_t = double;
 
 class TriFuzzyNum;
 
-constexpr TriFuzzyNum crisp_zero();
+TriFuzzyNum crisp_zero();
 
-constexpr TriFuzzyNum crisp_number(real_t v);
+TriFuzzyNum crisp_number(real_t v);
 
 class TriFuzzyNum {
     real_t lower;
@@ -15,17 +19,17 @@ class TriFuzzyNum {
     real_t upper;
 
 public:
-    constexpr TriFuzzyNum(real_t, real_t, real_t);
+    TriFuzzyNum(real_t, real_t, real_t);
 
     TriFuzzyNum(const TriFuzzyNum&);
 
-    TriFuzzyNum(TriFuzzyNum&&) noexcept;
+    TriFuzzyNum(TriFuzzyNum&&) = default;
 
-    constexpr real_t lower_value() const;
+    real_t lower_value() const;
 
-    constexpr real_t modal_value() const;
+    real_t modal_value() const;
 
-    constexpr real_t upper_value() const;
+    real_t upper_value() const;
 
     TriFuzzyNum rank() const;
 
@@ -45,7 +49,7 @@ public:
 
     bool operator!=(const TriFuzzyNum&) const;
 
-    auto operator<=>(const TriFuzzyNum&) const;
+//    auto operator<=>(const TriFuzzyNum&) const;
 };
 
 #endif //FUZZYNUM_H

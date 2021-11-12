@@ -145,59 +145,56 @@ fuzzy/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/build
 .PHONY : fuzzy/fast
 
-src/FuzzyNum.o: src/FuzzyNum.cpp.o
-.PHONY : src/FuzzyNum.o
+src/fuzzy_num.o: src/fuzzy_num.cc.o
+.PHONY : src/fuzzy_num.o
 
 # target to build an object file
-src/FuzzyNum.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzyNum.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.o
-.PHONY : src/FuzzyNum.cpp.o
+src/fuzzy_num.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/fuzzy_num.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.o
+.PHONY : src/fuzzy_num.cc.o
 
-src/FuzzyNum.i: src/FuzzyNum.cpp.i
-.PHONY : src/FuzzyNum.i
+src/fuzzy_num.i: src/fuzzy_num.cc.i
+.PHONY : src/fuzzy_num.i
 
 # target to preprocess a source file
-src/FuzzyNum.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzyNum.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.i
-.PHONY : src/FuzzyNum.cpp.i
+src/fuzzy_num.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/fuzzy_num.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.i
+.PHONY : src/fuzzy_num.cc.i
 
-src/FuzzyNum.s: src/FuzzyNum.cpp.s
-.PHONY : src/FuzzyNum.s
+src/fuzzy_num.s: src/fuzzy_num.cc.s
+.PHONY : src/fuzzy_num.s
 
 # target to generate assembly for a file
-src/FuzzyNum.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzyNum.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzyNum.cpp.s
-.PHONY : src/FuzzyNum.cpp.s
+src/fuzzy_num.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/fuzzy_num.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.s
+.PHONY : src/fuzzy_num.cc.s
 
-src/FuzzySet.o: src/FuzzySet.cpp.o
-.PHONY : src/FuzzySet.o
+src/fuzzy_set.o: src/fuzzy_set.cc.o
+.PHONY : src/fuzzy_set.o
 
 # target to build an object file
-src/FuzzySet.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzySet.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.o
-.PHONY : src/FuzzySet.cpp.o
+src/fuzzy_set.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.o
+.PHONY : src/fuzzy_set.cc.o
 
-src/FuzzySet.i: src/FuzzySet.cpp.i
-.PHONY : src/FuzzySet.i
+src/fuzzy_set.i: src/fuzzy_set.cc.i
+.PHONY : src/fuzzy_set.i
 
 # target to preprocess a source file
-src/FuzzySet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzySet.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.i
-.PHONY : src/FuzzySet.cpp.i
+src/fuzzy_set.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.i
+.PHONY : src/fuzzy_set.cc.i
 
-src/FuzzySet.s: src/FuzzySet.cpp.s
-.PHONY : src/FuzzySet.s
+src/fuzzy_set.s: src/fuzzy_set.cc.s
+.PHONY : src/fuzzy_set.s
 
 # target to generate assembly for a file
-src/FuzzySet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FuzzySet.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/FuzzySet.cpp.s
-.PHONY : src/FuzzySet.cpp.s
+src/fuzzy_set.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.s
+.PHONY : src/fuzzy_set.cc.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -257,12 +254,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... fuzzy"
 	@echo "... test"
-	@echo "... src/FuzzyNum.o"
-	@echo "... src/FuzzyNum.i"
-	@echo "... src/FuzzyNum.s"
-	@echo "... src/FuzzySet.o"
-	@echo "... src/FuzzySet.i"
-	@echo "... src/FuzzySet.s"
+	@echo "... src/fuzzy_num.o"
+	@echo "... src/fuzzy_num.i"
+	@echo "... src/fuzzy_num.s"
+	@echo "... src/fuzzy_set.o"
+	@echo "... src/fuzzy_set.i"
+	@echo "... src/fuzzy_set.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

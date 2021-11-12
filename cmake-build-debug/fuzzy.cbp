@@ -44,6 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DBOOST_ERROR_CODE_HEADER_ONLY"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -66,6 +67,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DBOOST_ERROR_CODE_HEADER_ONLY"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -88,6 +90,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DBOOST_ERROR_CODE_HEADER_ONLY"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -110,6 +113,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DBOOST_ERROR_CODE_HEADER_ONLY"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -126,20 +130,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/FuzzyNum.cpp">
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/fuzzy_num.cc">
 			<Option target="test"/>
 			<Option target="fuzzy"/>
 		</Unit>
-		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/FuzzyNum.h">
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/fuzzy_num.h">
 			<Option target="test"/>
 			<Option target="fuzzy"/>
 		</Unit>
-		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/FuzzySet.cpp">
-			<Option target="test"/>
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/fuzzy_set.cc">
 			<Option target="fuzzy"/>
 		</Unit>
-		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/FuzzySet.h">
-			<Option target="test"/>
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/fuzzy_set.h">
 			<Option target="fuzzy"/>
 		</Unit>
 		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/main.cpp">
