@@ -30,7 +30,7 @@ powinna być możliwość:
      TriFuzzyNum num(1.25, 2.25, 3.25);
      TriFuzzyNum num(2.25, 3.25, 1.25);
      constexpr TriFuzzyNum num(1.25, 2.25, 3.25);
-     constinit static TriFuzzyNum num(1.25, 2.25, 3.25);
+     constinit static TriFuzzyNum small_num(1.25, 2.25, 3.25);
    Nie powinno być natomiast możliwości utworzenia obiektu bez podania któregoś
    lub żadnego parametru.
  - utworzenia trójkątnej liczby rozmytej za pomocą kopiowania oraz przenoszenia
