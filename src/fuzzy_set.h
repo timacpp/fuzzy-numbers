@@ -1,19 +1,22 @@
 #ifndef FUZZYSET_H
 #define FUZZYSET_H
 
-#include "fuzzy_num.h"
-#include <unordered_set>
+#include <set>
+#include <compare>
 #include <initializer_list>
+#include "fuzzy_num.h"
 
 class TriFuzzyNumSet {
-    std::unordered_multiset<TriFuzzyNum> elements;
-
 public:
-    TriFuzzyNumSet(const std::initializer_list<TriFuzzyNum>&); // TODO: explicit or not?
+    TriFuzzyNumSet(const std::initializer_list<TriFuzzyNum>&);
 
-    TriFuzzyNumSet(const TriFuzzyNumSet&);
+    TriFuzzyNumSet(std::initializer_list<TriFuzzyNum>&&);
+
+    TriFuzzyNumSet(const TriFuzzyNumSet&) = default;
 
     TriFuzzyNumSet(TriFuzzyNumSet&&) noexcept;
+
+    ~TriFuzzyNumSet() = default;
 
     void insert(TriFuzzyNum&);
 
@@ -23,9 +26,12 @@ public:
 
     TriFuzzyNum arithmetic_mean();
 
-    TriFuzzyNumSet& operator=(const TriFuzzyNumSet&);
+    TriFuzzyNumSet& operator=(const TriFuzzyNumSet&) = default;
 
     TriFuzzyNumSet& operator=(TriFuzzyNumSet&&) noexcept;
+
+private:
+    std::multiset<TriFuzzyNum> elements;
 };
 
 #endif //FUZZYSET_H

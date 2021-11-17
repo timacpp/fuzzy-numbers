@@ -13,7 +13,7 @@ constexpr inline TriFuzzyNum crisp_zero();
 
 class TriFuzzyNum {
 public:
-    constexpr inline TriFuzzyNum(real_t first, real_t second, real_t third)
+    constexpr TriFuzzyNum(real_t first, real_t second, real_t third)
             : lower{first}, modal{second}, upper{third} {
         this->order_values();
     }
@@ -58,7 +58,7 @@ public:
 
     TriFuzzyNum& operator=(TriFuzzyNum&&) = default;
 
-//    auto operator<=>(const TriFuzzyNum&) const;
+    auto operator<=>(const TriFuzzyNum&) const = default;
 
     friend std::ostream& operator<<(std::ostream&, const TriFuzzyNum&);
 
@@ -66,12 +66,6 @@ private:
     real_t lower;
     real_t modal;
     real_t upper;
-
-    real_t rank_lower() const;
-
-    real_t rank_modal() const;
-
-    real_t rank_upper() const;
 
     TriFuzzyNum operator-() const;
 
@@ -92,5 +86,6 @@ constexpr inline TriFuzzyNum crisp_number(real_t v) {
 constexpr inline TriFuzzyNum crisp_zero() {
     return crisp_number(0);
 }
+
 
 #endif //FUZZYNUM_H

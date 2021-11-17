@@ -11,22 +11,21 @@ namespace {
     constexpr real_t lower{1};
     constexpr real_t modal{2};
     constexpr real_t upper{3};
-
     constexpr real_t eps{1e-9};
 
-    TriFuzzyNum sample() {
+    constexpr TriFuzzyNum sample() {
         return NUM(lower, modal, upper);
     }
 
-    TriFuzzyNum zero() {
+    constexpr TriFuzzyNum zero() {
         return crisp_zero();
     }
 
-    TriFuzzyNum one() {
+    constexpr TriFuzzyNum one() {
         return crisp_number(1);
     }
 
-    TriFuzzyNum epsilon() {
+    constexpr TriFuzzyNum epsilon() {
         return crisp_number(eps);
     }
 }
@@ -115,3 +114,9 @@ BOOST_AUTO_TEST_CASE(AssignmentTest) {
     BOOST_CHECK_EQUAL(num = epsilon(), epsilon());
 }
 
+BOOST_AUTO_TEST_CASE(OrderAfterOperationTest) {
+    TriFuzzyNum num{-1, 0, 1};
+    const TriFuzzyNum res{0, 1, 1};
+
+    BOOST_CHECK_EQUAL(num * num, res);
+}

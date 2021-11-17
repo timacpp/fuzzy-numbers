@@ -1,37 +1,41 @@
 #include "fuzzy_set.h"
+#include <numeric>
 
-TriFuzzyNumSet::TriFuzzyNumSet(const std::initializer_list<TriFuzzyNum>& list) {
-    // TODO
+TriFuzzyNumSet::TriFuzzyNumSet(const std::initializer_list<TriFuzzyNum>& list)
+        : elements{list} {}
+
+TriFuzzyNumSet::TriFuzzyNumSet(std::initializer_list<TriFuzzyNum>&& list)
+        : elements{std::move(list)} {}
+
+TriFuzzyNumSet::TriFuzzyNumSet(TriFuzzyNumSet&& src) noexcept
+        : elements{std::move(src.elements)} {}
+
+void TriFuzzyNumSet::insert(TriFuzzyNum& number) {
+    elements.insert(number);
 }
 
-TriFuzzyNumSet::TriFuzzyNumSet(const TriFuzzyNumSet& src) {
-    // TODO
+void TriFuzzyNumSet::insert(TriFuzzyNum&& number) noexcept {
+    elements.insert(number);
 }
 
-TriFuzzyNumSet::TriFuzzyNumSet(TriFuzzyNumSet &&) noexcept {
-    // TODO
-}
-
-void TriFuzzyNumSet::insert(TriFuzzyNum &) {
-    // TODO
-}
-
-void TriFuzzyNumSet::insert(TriFuzzyNum &&) noexcept {
-    // TODO
-}
-
-void TriFuzzyNumSet::remove(TriFuzzyNum &) {
-    // TODO
+void TriFuzzyNumSet::remove(TriFuzzyNum& number) {
+    elements.erase(number);
 }
 
 TriFuzzyNum TriFuzzyNumSet::arithmetic_mean() {
-    return crisp_zero();
-}
+    if (elements.empty()) {
+        throw std::length_error("TriFuzzyNumSet::arithmetic_mean - the set is empty.");
+    }
 
-TriFuzzyNumSet& TriFuzzyNumSet::operator=(const TriFuzzyNumSet& other) {
-    return *this;
+    const auto sum = std::accumulate(elements.begin(),elements.end(), crisp_zero());
+    const auto avg([this](real_t val) -> real_t {
+        return val / static_cast<real_t>(elements.size());
+    });
+
+    return {avg(sum.lower_value()), avg(sum.modal_value()), avg(sum.upper_value())};
 }
 
 TriFuzzyNumSet& TriFuzzyNumSet::operator=(TriFuzzyNumSet&& other) noexcept {
+    this->elements = std::move(other.elements);
     return *this;
 }

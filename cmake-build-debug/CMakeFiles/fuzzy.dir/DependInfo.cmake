@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tima/Coding/C&C++/fuzzy-numbers/src/fuzzy_num.cc" "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.o"
   "/home/tima/Coding/C&C++/fuzzy-numbers/src/fuzzy_set.cc" "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.o"
   "/home/tima/Coding/C&C++/fuzzy-numbers/src/main.cpp" "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/fuzzy.dir/src/main.cpp.o"
+  "/home/tima/Coding/C&C++/fuzzy-numbers/test/set_test.cpp" "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/fuzzy.dir/test/set_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

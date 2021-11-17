@@ -102,11 +102,24 @@ CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.s"
 	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/tima/Coding/C&C++/fuzzy-numbers/src/fuzzy_set.cc" -o CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.s
 
+CMakeFiles/fuzzy.dir/test/set_test.cpp.o: CMakeFiles/fuzzy.dir/flags.make
+CMakeFiles/fuzzy.dir/test/set_test.cpp.o: ../test/set_test.cpp
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fuzzy.dir/test/set_test.cpp.o -c "/home/tima/Coding/C&C++/fuzzy-numbers/test/set_test.cpp"
+
+CMakeFiles/fuzzy.dir/test/set_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fuzzy.dir/test/set_test.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/tima/Coding/C&C++/fuzzy-numbers/test/set_test.cpp" > CMakeFiles/fuzzy.dir/test/set_test.cpp.i
+
+CMakeFiles/fuzzy.dir/test/set_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fuzzy.dir/test/set_test.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/tima/Coding/C&C++/fuzzy-numbers/test/set_test.cpp" -o CMakeFiles/fuzzy.dir/test/set_test.cpp.s
+
 # Object files for target fuzzy
 fuzzy_OBJECTS = \
 "CMakeFiles/fuzzy.dir/src/main.cpp.o" \
 "CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.o" \
-"CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.o"
+"CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.o" \
+"CMakeFiles/fuzzy.dir/test/set_test.cpp.o"
 
 # External object files for target fuzzy
 fuzzy_EXTERNAL_OBJECTS =
@@ -114,6 +127,7 @@ fuzzy_EXTERNAL_OBJECTS =
 fuzzy: CMakeFiles/fuzzy.dir/src/main.cpp.o
 fuzzy: CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.o
 fuzzy: CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.o
+fuzzy: CMakeFiles/fuzzy.dir/test/set_test.cpp.o
 fuzzy: CMakeFiles/fuzzy.dir/build.make
 fuzzy: CMakeFiles/fuzzy.dir/link.txt
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fuzzy.dir/link.txt --verbose=$(VERBOSE)

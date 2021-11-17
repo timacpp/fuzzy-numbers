@@ -66,8 +66,9 @@ CMAKE_BINARY_DIR = "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug"
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/test.dir/all
 all: CMakeFiles/fuzzy.dir/all
+all: CMakeFiles/num_test.dir/all
+all: CMakeFiles/set_test.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -75,35 +76,10 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/test.dir/clean
 clean: CMakeFiles/fuzzy.dir/clean
+clean: CMakeFiles/num_test.dir/clean
+clean: CMakeFiles/set_test.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/test.dir
-
-# All Build rule for target.
-CMakeFiles/test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" --progress-num=5,6,7 "Built target test"
-.PHONY : CMakeFiles/test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/test.dir/rule
-
-# Convenience name for target.
-test: CMakeFiles/test.dir/rule
-.PHONY : test
-
-# clean rule for target.
-CMakeFiles/test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
-.PHONY : CMakeFiles/test.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/fuzzy.dir
@@ -112,12 +88,12 @@ CMakeFiles/test.dir/clean:
 CMakeFiles/fuzzy.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4 "Built target fuzzy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5 "Built target fuzzy"
 .PHONY : CMakeFiles/fuzzy.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fuzzy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fuzzy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/fuzzy.dir/rule
@@ -130,6 +106,58 @@ fuzzy: CMakeFiles/fuzzy.dir/rule
 CMakeFiles/fuzzy.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/clean
 .PHONY : CMakeFiles/fuzzy.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/num_test.dir
+
+# All Build rule for target.
+CMakeFiles/num_test.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" --progress-num=6,7,8 "Built target num_test"
+.PHONY : CMakeFiles/num_test.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/num_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/num_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" 0
+.PHONY : CMakeFiles/num_test.dir/rule
+
+# Convenience name for target.
+num_test: CMakeFiles/num_test.dir/rule
+.PHONY : num_test
+
+# clean rule for target.
+CMakeFiles/num_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/clean
+.PHONY : CMakeFiles/num_test.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/set_test.dir
+
+# All Build rule for target.
+CMakeFiles/set_test.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" --progress-num=9,10,11 "Built target set_test"
+.PHONY : CMakeFiles/set_test.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/set_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/set_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles" 0
+.PHONY : CMakeFiles/set_test.dir/rule
+
+# Convenience name for target.
+set_test: CMakeFiles/set_test.dir/rule
+.PHONY : set_test
+
+# clean rule for target.
+CMakeFiles/set_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/clean
+.PHONY : CMakeFiles/set_test.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

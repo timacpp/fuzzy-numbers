@@ -1,1 +1,1 @@
-/bin/c++ -g CMakeFiles/fuzzy.dir/src/main.cpp.o CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.o CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.o -o fuzzy 
+/bin/c++ -g CMakeFiles/fuzzy.dir/src/main.cpp.o CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.o CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.o CMakeFiles/fuzzy.dir/test/set_test.cpp.o -o fuzzy 

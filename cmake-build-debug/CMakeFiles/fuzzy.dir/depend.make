@@ -4,5 +4,13 @@
 CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.o: \
  ../src/fuzzy_num.cc \
  ../src/fuzzy_num.h
+CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.o: \
+ ../src/fuzzy_num.h \
+ ../src/fuzzy_set.cc \
+ ../src/fuzzy_set.h
 CMakeFiles/fuzzy.dir/src/main.cpp.o: \
  ../src/main.cpp
+CMakeFiles/fuzzy.dir/test/set_test.cpp.o: \
+ ../src/fuzzy_num.h \
+ ../src/fuzzy_set.h \
+ ../test/set_test.cpp
