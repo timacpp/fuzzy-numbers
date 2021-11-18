@@ -1,6 +1,8 @@
 #ifndef FUZZYNUM_H
 #define FUZZYNUM_H
 
+#include <vector>
+#include <compare>
 #include <iostream>
 
 using real_t = double;
@@ -24,43 +26,43 @@ public:
 
     ~TriFuzzyNum() = default;
 
-    constexpr inline real_t lower_value() const {
+    [[nodiscard]] constexpr inline real_t lower_value() const {
         return this->lower;
     }
 
-    constexpr inline real_t modal_value() const {
+    [[nodiscard]] constexpr inline real_t modal_value() const {
         return this->modal;
     }
 
-    constexpr inline real_t upper_value() const {
+    [[nodiscard]] constexpr inline real_t upper_value() const {
         return this->upper;
     }
 
-    TriFuzzyNum rank() const;
+    [[nodiscard]] TriFuzzyNum rank() const;
 
-    TriFuzzyNum operator+(const TriFuzzyNum&) const;
+    friend TriFuzzyNum operator+(const TriFuzzyNum&, const TriFuzzyNum&);
 
-    TriFuzzyNum& operator+=(const TriFuzzyNum&);
+    friend TriFuzzyNum operator-(const TriFuzzyNum&, const TriFuzzyNum&);
 
-    TriFuzzyNum operator-(const TriFuzzyNum&) const;
-
-    TriFuzzyNum& operator-=(const TriFuzzyNum&);
-
-    TriFuzzyNum operator*(const TriFuzzyNum&) const;
-
-    TriFuzzyNum& operator*=(const TriFuzzyNum&);
-
-    bool operator==(const TriFuzzyNum&) const;
-
-    bool operator!=(const TriFuzzyNum&) const;
+    friend TriFuzzyNum operator*(const TriFuzzyNum&, const TriFuzzyNum&);
 
     TriFuzzyNum& operator=(const TriFuzzyNum&) = default;
 
     TriFuzzyNum& operator=(TriFuzzyNum&&) = default;
 
-    auto operator<=>(const TriFuzzyNum&) const = default;
+    TriFuzzyNum& operator+=(const TriFuzzyNum&);
+
+    TriFuzzyNum& operator-=(const TriFuzzyNum&);
+
+    TriFuzzyNum& operator*=(const TriFuzzyNum&);
 
     friend std::ostream& operator<<(std::ostream&, const TriFuzzyNum&);
+
+    friend std::strong_ordering operator<=>(const TriFuzzyNum&, const TriFuzzyNum&);
+
+    friend constexpr inline bool operator==(const TriFuzzyNum&, const TriFuzzyNum&);
+
+    friend constexpr inline bool operator!=(const TriFuzzyNum&, const TriFuzzyNum&);
 
 private:
     real_t lower;
@@ -68,6 +70,8 @@ private:
     real_t upper;
 
     TriFuzzyNum operator-() const;
+
+    [[nodiscard]] std::vector<real_t> to_vector() const;
 
     constexpr inline void order_values() {
         if (lower > modal)
@@ -79,6 +83,16 @@ private:
     }
 };
 
+constexpr inline bool operator==(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs) {
+    return lhs.lower == rhs.lower &&
+           lhs.modal == rhs.modal &&
+           lhs.upper == rhs.upper;
+}
+
+constexpr inline bool operator!=(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs) {
+    return !(lhs == rhs);
+}
+
 constexpr inline TriFuzzyNum crisp_number(real_t v) {
     return {v, v, v};
 }
@@ -86,6 +100,5 @@ constexpr inline TriFuzzyNum crisp_number(real_t v) {
 constexpr inline TriFuzzyNum crisp_zero() {
     return crisp_number(0);
 }
-
 
 #endif //FUZZYNUM_H

@@ -2,7 +2,6 @@
 #define FUZZYSET_H
 
 #include <set>
-#include <compare>
 #include <initializer_list>
 #include "fuzzy_num.h"
 
@@ -22,7 +21,7 @@ public:
 
     void insert(TriFuzzyNum&&) noexcept;
 
-    void remove(TriFuzzyNum&);
+    void remove(TriFuzzyNum);
 
     TriFuzzyNum arithmetic_mean();
 

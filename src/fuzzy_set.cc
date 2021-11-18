@@ -18,7 +18,7 @@ void TriFuzzyNumSet::insert(TriFuzzyNum&& number) noexcept {
     elements.insert(number);
 }
 
-void TriFuzzyNumSet::remove(TriFuzzyNum& number) {
+void TriFuzzyNumSet::remove(TriFuzzyNum number) {
     elements.erase(number);
 }
 
