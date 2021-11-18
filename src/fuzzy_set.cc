@@ -5,7 +5,7 @@ TriFuzzyNumSet::TriFuzzyNumSet(const std::initializer_list<TriFuzzyNum>& list)
         : elements{list} {}
 
 TriFuzzyNumSet::TriFuzzyNumSet(std::initializer_list<TriFuzzyNum>&& list)
-        : elements{std::move(list)} {}
+        : elements{list} {}
 
 TriFuzzyNumSet::TriFuzzyNumSet(TriFuzzyNumSet&& src) noexcept
         : elements{std::move(src.elements)} {}

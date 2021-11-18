@@ -1,7 +1,7 @@
 #include <cassert>
 #include <iostream>
-#include "fuzzy_num.h"
-#include "fuzzy_set.h"
+#include "../src/fuzzy_num.h"
+#include "../src/fuzzy_set.h"
 
 using std::cout;
 using std::endl;

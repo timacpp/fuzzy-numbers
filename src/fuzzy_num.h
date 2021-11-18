@@ -38,8 +38,6 @@ public:
         return this->upper;
     }
 
-    [[nodiscard]] TriFuzzyNum rank() const;
-
     friend TriFuzzyNum operator+(const TriFuzzyNum&, const TriFuzzyNum&);
 
     friend TriFuzzyNum operator-(const TriFuzzyNum&, const TriFuzzyNum&);
@@ -71,7 +69,7 @@ private:
 
     TriFuzzyNum operator-() const;
 
-    [[nodiscard]] std::vector<real_t> to_vector() const;
+    [[nodiscard]] std::vector<real_t> rank() const;
 
     constexpr inline void order_values() {
         if (lower > modal)

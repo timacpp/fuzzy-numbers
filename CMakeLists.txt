@@ -14,8 +14,8 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 
-set(SOURCE_FILES src/fuzzy_num.cc src/fuzzy_num.h src/fuzzy_set.cc src/fuzzy_set.h)
+set(SOURCE_FILES src/fuzzy_num.cc src/fuzzy_num.h src/fuzzy_set.cc src/fuzzy_set.h release/fuzzy.cc release/fuzzy.h)
 
 add_executable(num_test test/num_test.cpp src/fuzzy_num.cc src/fuzzy_num.h)
 add_executable(set_test test/set_test.cpp src/fuzzy_set.cc src/fuzzy_set.h)
-add_executable(simple_test src/simple_test.cc ${SOURCE_FILES})
+add_executable(simple_test test/simple_test.cc ${SOURCE_FILES})
