@@ -7,12 +7,6 @@
 
 using real_t = double;
 
-class TriFuzzyNum;
-
-constexpr inline TriFuzzyNum crisp_number(real_t v);
-
-constexpr inline TriFuzzyNum crisp_zero();
-
 class TriFuzzyNum {
 public:
     constexpr TriFuzzyNum(real_t first, real_t second, real_t third)
@@ -91,12 +85,10 @@ constexpr inline bool operator!=(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs)
     return !(lhs == rhs);
 }
 
-constexpr inline TriFuzzyNum crisp_number(real_t v) {
+consteval inline TriFuzzyNum crisp_number(real_t v) {
     return {v, v, v};
 }
 
-constexpr inline TriFuzzyNum crisp_zero() {
-    return crisp_number(0);
-}
+constinit TriFuzzyNum crisp_zero{crisp_number(0)};
 
 #endif //FUZZYNUM_H
