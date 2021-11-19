@@ -7,8 +7,12 @@
 
 using real_t = double;
 
+/** Class representing a triangular fuzzy number **/
 class TriFuzzyNum {
 public:
+    TriFuzzyNum() = delete;
+
+    /** Constructs a triangular fuzzy number with ascending order of values */
     constexpr TriFuzzyNum(real_t first, real_t second, real_t third)
             : lower{first}, modal{second}, upper{third} {
         this->order_values();
@@ -63,6 +67,12 @@ private:
 
     TriFuzzyNum operator-() const;
 
+    /**
+     * Computes the rank of a triangular fuzzy number.
+     * It is required for the comparison of the numbers.
+     * For details check the link in README.md file.
+     * @return rank of a triangular number
+     */
     [[nodiscard]] std::vector<real_t> rank() const;
 
     constexpr inline void order_values() {
@@ -85,10 +95,16 @@ constexpr inline bool operator!=(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs)
     return !(lhs == rhs);
 }
 
+/**
+ * Compile-time only default fuzzy number generator.
+ * @param v single parameter
+ * @return (v,v,v)
+ **/
 consteval inline TriFuzzyNum crisp_number(real_t v) {
     return {v, v, v};
 }
 
+/** Compile-time only addition neutral element **/
 constinit TriFuzzyNum crisp_zero{crisp_number(0)};
 
 #endif //FUZZYNUM_H

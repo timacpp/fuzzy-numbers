@@ -5,6 +5,7 @@
 #include <initializer_list>
 #include "fuzzy_num.h"
 
+/** Class representing a multiset of triangular fuzzy numbers **/
 class TriFuzzyNumSet {
 public:
     TriFuzzyNumSet() = default;
