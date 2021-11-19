@@ -1,5 +1,5 @@
-/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/fuzzy.dir
 /home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/num_test.dir
 /home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/set_test.dir
+/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/simple_test.dir
 /home/tima/Coding/C&C++/fuzzy-numbers/cmake-build-debug/CMakeFiles/edit_cache.dir

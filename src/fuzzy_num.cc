@@ -2,19 +2,11 @@
 #include <cmath>
 
 TriFuzzyNum operator+(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs) {
-    return {
-        lhs.lower + rhs.lower,
-        lhs.modal + rhs.modal,
-        lhs.upper + rhs.upper
-    };
+    return {lhs.lower + rhs.lower,lhs.modal + rhs.modal,lhs.upper + rhs.upper};
 }
 
 TriFuzzyNum operator*(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs) {
-    return {
-            lhs.lower * rhs.lower,
-            lhs.modal * rhs.modal,
-            lhs.upper * rhs.upper
-    };
+    return {lhs.lower * rhs.lower,lhs.modal * rhs.modal,lhs.upper * rhs.upper};
 }
 
 TriFuzzyNum TriFuzzyNum::operator-() const {
@@ -61,8 +53,4 @@ std::strong_ordering operator<=>(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs)
     else if (lhs_values > rhs_values)
         return std::strong_ordering::greater;
     return std::strong_ordering::equal;
-}
-
-std::vector<real_t> TriFuzzyNum::to_vector() const {
-    return {this->lower, this->modal, this->upper};
 }

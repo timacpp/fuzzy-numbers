@@ -120,19 +120,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fuzzy
-
-# Build rule for target.
-fuzzy: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fuzzy
-.PHONY : fuzzy
-
-# fast build rule for target.
-fuzzy/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/build
-.PHONY : fuzzy/fast
-
-#=============================================================================
 # Target rules for targets named num_test
 
 # Build rule for target.
@@ -158,13 +145,50 @@ set_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/build
 .PHONY : set_test/fast
 
+#=============================================================================
+# Target rules for targets named simple_test
+
+# Build rule for target.
+simple_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple_test
+.PHONY : simple_test
+
+# fast build rule for target.
+simple_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/build
+.PHONY : simple_test/fast
+
+release/fuzzy.o: release/fuzzy.cc.o
+.PHONY : release/fuzzy.o
+
+# target to build an object file
+release/fuzzy.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/release/fuzzy.cc.o
+.PHONY : release/fuzzy.cc.o
+
+release/fuzzy.i: release/fuzzy.cc.i
+.PHONY : release/fuzzy.i
+
+# target to preprocess a source file
+release/fuzzy.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/release/fuzzy.cc.i
+.PHONY : release/fuzzy.cc.i
+
+release/fuzzy.s: release/fuzzy.cc.s
+.PHONY : release/fuzzy.s
+
+# target to generate assembly for a file
+release/fuzzy.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/release/fuzzy.cc.s
+.PHONY : release/fuzzy.cc.s
+
 src/fuzzy_num.o: src/fuzzy_num.cc.o
 .PHONY : src/fuzzy_num.o
 
 # target to build an object file
 src/fuzzy_num.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/src/fuzzy_num.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/src/fuzzy_num.cc.o
 .PHONY : src/fuzzy_num.cc.o
 
 src/fuzzy_num.i: src/fuzzy_num.cc.i
@@ -172,8 +196,8 @@ src/fuzzy_num.i: src/fuzzy_num.cc.i
 
 # target to preprocess a source file
 src/fuzzy_num.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/src/fuzzy_num.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/src/fuzzy_num.cc.i
 .PHONY : src/fuzzy_num.cc.i
 
 src/fuzzy_num.s: src/fuzzy_num.cc.s
@@ -181,8 +205,8 @@ src/fuzzy_num.s: src/fuzzy_num.cc.s
 
 # target to generate assembly for a file
 src/fuzzy_num.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_num.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/src/fuzzy_num.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/src/fuzzy_num.cc.s
 .PHONY : src/fuzzy_num.cc.s
 
 src/fuzzy_set.o: src/fuzzy_set.cc.o
@@ -190,8 +214,8 @@ src/fuzzy_set.o: src/fuzzy_set.cc.o
 
 # target to build an object file
 src/fuzzy_set.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/src/fuzzy_set.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/src/fuzzy_set.cc.o
 .PHONY : src/fuzzy_set.cc.o
 
 src/fuzzy_set.i: src/fuzzy_set.cc.i
@@ -199,8 +223,8 @@ src/fuzzy_set.i: src/fuzzy_set.cc.i
 
 # target to preprocess a source file
 src/fuzzy_set.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/src/fuzzy_set.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/src/fuzzy_set.cc.i
 .PHONY : src/fuzzy_set.cc.i
 
 src/fuzzy_set.s: src/fuzzy_set.cc.s
@@ -208,33 +232,9 @@ src/fuzzy_set.s: src/fuzzy_set.cc.s
 
 # target to generate assembly for a file
 src/fuzzy_set.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/fuzzy_set.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/src/fuzzy_set.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/src/fuzzy_set.cc.s
 .PHONY : src/fuzzy_set.cc.s
-
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
 
 test/num_test.o: test/num_test.cpp.o
 .PHONY : test/num_test.o
@@ -265,7 +265,6 @@ test/set_test.o: test/set_test.cpp.o
 
 # target to build an object file
 test/set_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/test/set_test.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/test/set_test.cpp.o
 .PHONY : test/set_test.cpp.o
 
@@ -274,7 +273,6 @@ test/set_test.i: test/set_test.cpp.i
 
 # target to preprocess a source file
 test/set_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/test/set_test.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/test/set_test.cpp.i
 .PHONY : test/set_test.cpp.i
 
@@ -283,9 +281,32 @@ test/set_test.s: test/set_test.cpp.s
 
 # target to generate assembly for a file
 test/set_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fuzzy.dir/build.make CMakeFiles/fuzzy.dir/test/set_test.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/test/set_test.cpp.s
 .PHONY : test/set_test.cpp.s
+
+test/simple_test.o: test/simple_test.cc.o
+.PHONY : test/simple_test.o
+
+# target to build an object file
+test/simple_test.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/test/simple_test.cc.o
+.PHONY : test/simple_test.cc.o
+
+test/simple_test.i: test/simple_test.cc.i
+.PHONY : test/simple_test.i
+
+# target to preprocess a source file
+test/simple_test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/test/simple_test.cc.i
+.PHONY : test/simple_test.cc.i
+
+test/simple_test.s: test/simple_test.cc.s
+.PHONY : test/simple_test.s
+
+# target to generate assembly for a file
+test/simple_test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/test/simple_test.cc.s
+.PHONY : test/simple_test.cc.s
 
 # Help Target
 help:
@@ -295,24 +316,27 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... fuzzy"
 	@echo "... num_test"
 	@echo "... set_test"
+	@echo "... simple_test"
+	@echo "... release/fuzzy.o"
+	@echo "... release/fuzzy.i"
+	@echo "... release/fuzzy.s"
 	@echo "... src/fuzzy_num.o"
 	@echo "... src/fuzzy_num.i"
 	@echo "... src/fuzzy_num.s"
 	@echo "... src/fuzzy_set.o"
 	@echo "... src/fuzzy_set.i"
 	@echo "... src/fuzzy_set.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 	@echo "... test/num_test.o"
 	@echo "... test/num_test.i"
 	@echo "... test/num_test.s"
 	@echo "... test/set_test.o"
 	@echo "... test/set_test.i"
 	@echo "... test/set_test.s"
+	@echo "... test/simple_test.o"
+	@echo "... test/simple_test.i"
+	@echo "... test/simple_test.s"
 .PHONY : help
 
 

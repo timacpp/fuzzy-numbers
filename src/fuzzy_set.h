@@ -7,6 +7,8 @@
 
 class TriFuzzyNumSet {
 public:
+    TriFuzzyNumSet() = default;
+
     TriFuzzyNumSet(const std::initializer_list<TriFuzzyNum>&);
 
     TriFuzzyNumSet(std::initializer_list<TriFuzzyNum>&&);

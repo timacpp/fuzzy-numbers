@@ -17,62 +17,6 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="fuzzy">
-				<Option output="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/fuzzy" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DBOOST_ERROR_CODE_HEADER_ONLY"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 fuzzy"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="fuzzy/fast">
-				<Option output="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/fuzzy" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DBOOST_ERROR_CODE_HEADER_ONLY"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 fuzzy/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="num_test">
 				<Option output="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/num_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug"/>
@@ -165,6 +109,62 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="simple_test">
+				<Option output="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/simple_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DBOOST_ERROR_CODE_HEADER_ONLY"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 simple_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="simple_test/fast">
+				<Option output="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/simple_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DBOOST_ERROR_CODE_HEADER_ONLY"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 simple_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/home/tima/Coding/C&amp;C++/fuzzy-numbers/cmake-build-debug"/>
 				<Option type="4"/>
@@ -176,31 +176,36 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/release/fuzzy.cc">
+			<Option target="simple_test"/>
+		</Unit>
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/release/fuzzy.h">
+			<Option target="simple_test"/>
+		</Unit>
 		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/fuzzy_num.cc">
-			<Option target="fuzzy"/>
 			<Option target="num_test"/>
+			<Option target="simple_test"/>
 		</Unit>
 		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/fuzzy_num.h">
-			<Option target="fuzzy"/>
 			<Option target="num_test"/>
+			<Option target="simple_test"/>
 		</Unit>
 		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/fuzzy_set.cc">
-			<Option target="fuzzy"/>
 			<Option target="set_test"/>
+			<Option target="simple_test"/>
 		</Unit>
 		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/fuzzy_set.h">
-			<Option target="fuzzy"/>
 			<Option target="set_test"/>
-		</Unit>
-		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/main.cpp">
-			<Option target="fuzzy"/>
+			<Option target="simple_test"/>
 		</Unit>
 		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/test/num_test.cpp">
 			<Option target="num_test"/>
 		</Unit>
 		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/test/set_test.cpp">
-			<Option target="fuzzy"/>
 			<Option target="set_test"/>
+		</Unit>
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/test/simple_test.cc">
+			<Option target="simple_test"/>
 		</Unit>
 		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
