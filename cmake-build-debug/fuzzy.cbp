@@ -176,12 +176,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/release/fuzzy.cc">
-			<Option target="simple_test"/>
-		</Unit>
-		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/release/fuzzy.h">
-			<Option target="simple_test"/>
-		</Unit>
 		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/src/fuzzy_num.cc">
 			<Option target="num_test"/>
 			<Option target="simple_test"/>
@@ -198,10 +192,10 @@
 			<Option target="set_test"/>
 			<Option target="simple_test"/>
 		</Unit>
-		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/test/num_test.cpp">
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/test/num_test.cc">
 			<Option target="num_test"/>
 		</Unit>
-		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/test/set_test.cpp">
+		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/test/set_test.cc">
 			<Option target="set_test"/>
 		</Unit>
 		<Unit filename="/home/tima/Coding/C&amp;C++/fuzzy-numbers/test/simple_test.cc">

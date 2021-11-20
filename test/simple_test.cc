@@ -33,7 +33,7 @@ int main() {
   assert((num1 += num3) == TriFuzzyNum(2, 3, 4));
   assert((num1 -= num3) == TriFuzzyNum(1, 2, 3));
   assert((num1 *= num3) == num1);
-  assert((num1 += crisp_zero()) == num1);
+  assert((num1 += crisp_zero) == num1);
 
   static_assert(num3.lower_value() == 1);
   static_assert(num3.modal_value() == 1);

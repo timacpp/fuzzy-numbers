@@ -8,28 +8,15 @@
 #define MUL(x, y, z) NUM(x * x, y * y, z * z)
 
 namespace {
-    constexpr real_t lower{1};
-    constexpr real_t modal{2};
-    constexpr real_t upper{3};
+    constinit real_t lower{1};
+    constinit real_t modal{2};
+    constinit real_t upper{3};
     constexpr real_t eps{1e-9};
 
-    constexpr TriFuzzyNum sample() {
+    TriFuzzyNum sample() {
         return NUM(lower, modal, upper);
     }
-
-    constexpr TriFuzzyNum zero() {
-        return crisp_zero();
-    }
-
-    constexpr TriFuzzyNum one() {
-        return crisp_number(1);
-    }
-
-    constexpr TriFuzzyNum epsilon() {
-        return crisp_number(eps);
-    }
 }
-
 
 BOOST_AUTO_TEST_CASE(ValuesTest) {
     TriFuzzyNum num{sample()};
@@ -43,9 +30,9 @@ BOOST_AUTO_TEST_CASE(EqualTest) {
     TriFuzzyNum num{sample()};
 
     BOOST_CHECK(num == num);
-    BOOST_CHECK(zero() == zero());
-    BOOST_CHECK(num != zero());
-    BOOST_CHECK(num - zero() == num + zero());
+    BOOST_CHECK(crisp_zero == crisp_zero);
+    BOOST_CHECK(num != crisp_zero);
+    BOOST_CHECK(num - crisp_zero == num + crisp_zero);
     BOOST_CHECK(num + num == ADD(lower, modal, upper));
     BOOST_CHECK(num * num == MUL(lower, modal, upper));
 }
@@ -72,10 +59,10 @@ BOOST_AUTO_TEST_CASE(CopyConstructorTest) {
 BOOST_AUTO_TEST_CASE(ZeroMultiplyTest) {
     TriFuzzyNum num{sample()};
 
-    BOOST_CHECK_EQUAL(num * zero(), zero());
-    BOOST_CHECK_EQUAL(zero() * num, zero());
-    BOOST_CHECK_EQUAL(zero() * zero(), zero());
-    BOOST_CHECK_EQUAL((num *= zero()), zero());
+    BOOST_CHECK_EQUAL(num * crisp_zero, crisp_zero);
+    BOOST_CHECK_EQUAL(crisp_zero * num, crisp_zero);
+    BOOST_CHECK_EQUAL(crisp_zero * crisp_zero, crisp_zero);
+    BOOST_CHECK_EQUAL((num *= crisp_zero), crisp_zero);
 }
 
 BOOST_AUTO_TEST_CASE(GeneralMultiplyTest) {
@@ -96,22 +83,22 @@ BOOST_AUTO_TEST_CASE(GeneralMultiplyTest) {
 BOOST_AUTO_TEST_CASE(AddTest) {
     TriFuzzyNum num{sample()};
 
-    BOOST_CHECK_EQUAL(num + zero(), num);
-    BOOST_CHECK_EQUAL(num - zero(), num);
+    BOOST_CHECK_EQUAL(num + crisp_zero, num);
+    BOOST_CHECK_EQUAL(num - crisp_zero, num);
     BOOST_CHECK_EQUAL(num + num, ADD(lower, modal, upper));
-    BOOST_CHECK_EQUAL(zero() + zero(), zero());
-    BOOST_CHECK_EQUAL(epsilon() + epsilon(), ADD(eps, eps, eps));
-    BOOST_CHECK(num + epsilon() != num);
-    BOOST_CHECK(num - epsilon() != num);
+    BOOST_CHECK_EQUAL(crisp_zero + crisp_zero, crisp_zero);
+    BOOST_CHECK_EQUAL(crisp_number(eps) + crisp_number(eps), ADD(eps, eps, eps));
+    BOOST_CHECK(num + crisp_number(eps) != num);
+    BOOST_CHECK(num - crisp_number(eps) != num);
 }
 
 BOOST_AUTO_TEST_CASE(AssignmentTest) {
     TriFuzzyNum num{sample()};
 
     BOOST_CHECK_EQUAL(num = num, num);
-    BOOST_CHECK_EQUAL(num = zero(), zero());
-    BOOST_CHECK_EQUAL(num = one(), one());
-    BOOST_CHECK_EQUAL(num = epsilon(), epsilon());
+    BOOST_CHECK_EQUAL(num = crisp_zero, crisp_zero);
+    BOOST_CHECK_EQUAL(num = crisp_number(1), crisp_number(1));
+    BOOST_CHECK_EQUAL(num = crisp_number(eps), crisp_number(eps));
 }
 
 BOOST_AUTO_TEST_CASE(OrderAfterOperationTest) {

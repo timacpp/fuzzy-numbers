@@ -158,30 +158,6 @@ simple_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/build
 .PHONY : simple_test/fast
 
-release/fuzzy.o: release/fuzzy.cc.o
-.PHONY : release/fuzzy.o
-
-# target to build an object file
-release/fuzzy.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/release/fuzzy.cc.o
-.PHONY : release/fuzzy.cc.o
-
-release/fuzzy.i: release/fuzzy.cc.i
-.PHONY : release/fuzzy.i
-
-# target to preprocess a source file
-release/fuzzy.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/release/fuzzy.cc.i
-.PHONY : release/fuzzy.cc.i
-
-release/fuzzy.s: release/fuzzy.cc.s
-.PHONY : release/fuzzy.s
-
-# target to generate assembly for a file
-release/fuzzy.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/release/fuzzy.cc.s
-.PHONY : release/fuzzy.cc.s
-
 src/fuzzy_num.o: src/fuzzy_num.cc.o
 .PHONY : src/fuzzy_num.o
 
@@ -236,53 +212,53 @@ src/fuzzy_set.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/src/fuzzy_set.cc.s
 .PHONY : src/fuzzy_set.cc.s
 
-test/num_test.o: test/num_test.cpp.o
+test/num_test.o: test/num_test.cc.o
 .PHONY : test/num_test.o
 
 # target to build an object file
-test/num_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/test/num_test.cpp.o
-.PHONY : test/num_test.cpp.o
+test/num_test.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/test/num_test.cc.o
+.PHONY : test/num_test.cc.o
 
-test/num_test.i: test/num_test.cpp.i
+test/num_test.i: test/num_test.cc.i
 .PHONY : test/num_test.i
 
 # target to preprocess a source file
-test/num_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/test/num_test.cpp.i
-.PHONY : test/num_test.cpp.i
+test/num_test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/test/num_test.cc.i
+.PHONY : test/num_test.cc.i
 
-test/num_test.s: test/num_test.cpp.s
+test/num_test.s: test/num_test.cc.s
 .PHONY : test/num_test.s
 
 # target to generate assembly for a file
-test/num_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/test/num_test.cpp.s
-.PHONY : test/num_test.cpp.s
+test/num_test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/num_test.dir/build.make CMakeFiles/num_test.dir/test/num_test.cc.s
+.PHONY : test/num_test.cc.s
 
-test/set_test.o: test/set_test.cpp.o
+test/set_test.o: test/set_test.cc.o
 .PHONY : test/set_test.o
 
 # target to build an object file
-test/set_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/test/set_test.cpp.o
-.PHONY : test/set_test.cpp.o
+test/set_test.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/test/set_test.cc.o
+.PHONY : test/set_test.cc.o
 
-test/set_test.i: test/set_test.cpp.i
+test/set_test.i: test/set_test.cc.i
 .PHONY : test/set_test.i
 
 # target to preprocess a source file
-test/set_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/test/set_test.cpp.i
-.PHONY : test/set_test.cpp.i
+test/set_test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/test/set_test.cc.i
+.PHONY : test/set_test.cc.i
 
-test/set_test.s: test/set_test.cpp.s
+test/set_test.s: test/set_test.cc.s
 .PHONY : test/set_test.s
 
 # target to generate assembly for a file
-test/set_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/test/set_test.cpp.s
-.PHONY : test/set_test.cpp.s
+test/set_test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/set_test.dir/build.make CMakeFiles/set_test.dir/test/set_test.cc.s
+.PHONY : test/set_test.cc.s
 
 test/simple_test.o: test/simple_test.cc.o
 .PHONY : test/simple_test.o
@@ -319,9 +295,6 @@ help:
 	@echo "... num_test"
 	@echo "... set_test"
 	@echo "... simple_test"
-	@echo "... release/fuzzy.o"
-	@echo "... release/fuzzy.i"
-	@echo "... release/fuzzy.s"
 	@echo "... src/fuzzy_num.o"
 	@echo "... src/fuzzy_num.i"
 	@echo "... src/fuzzy_num.s"

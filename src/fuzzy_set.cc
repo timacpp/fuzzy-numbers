@@ -27,15 +27,20 @@ TriFuzzyNum TriFuzzyNumSet::arithmetic_mean() {
         throw std::length_error("TriFuzzyNumSet::arithmetic_mean - the set is empty.");
     }
 
-    const auto sum = std::accumulate(elements.begin(),elements.end(), crisp_zero());
-    const auto avg([this](real_t val) -> real_t {
-        return val / static_cast<real_t>(elements.size());
+    const auto tri_div([](const TriFuzzyNum& num, size_t divisor) -> TriFuzzyNum {
+        return {num.lower_value() / divisor,
+                num.modal_value() / divisor,
+                num.upper_value() / divisor};
     });
 
-    return {avg(sum.lower_value()), avg(sum.modal_value()), avg(sum.upper_value())};
+    return tri_div(this->sum(), elements.size());
 }
 
 TriFuzzyNumSet& TriFuzzyNumSet::operator=(TriFuzzyNumSet&& other) noexcept {
     this->elements = std::move(other.elements);
     return *this;
+}
+
+TriFuzzyNum TriFuzzyNumSet::sum() const {
+    return std::accumulate(elements.begin(),elements.end(), crisp_zero);
 }

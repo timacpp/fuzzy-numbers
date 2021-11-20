@@ -1,10 +1,11 @@
 #ifndef FUZZYNUM_H
 #define FUZZYNUM_H
 
-#include <vector>
+#include <array>
 #include <compare>
 #include <iostream>
 
+/** Type to represent triangular fuzzy number parameters **/
 using real_t = double;
 
 /** Class representing a triangular fuzzy number **/
@@ -65,6 +66,8 @@ private:
     real_t modal;
     real_t upper;
 
+    constexpr static size_t RANK_SIZE{3};
+
     TriFuzzyNum operator-() const;
 
     /**
@@ -73,7 +76,7 @@ private:
      * For details check the link in README.md file.
      * @return rank of a triangular number
      */
-    [[nodiscard]] std::vector<real_t> rank() const;
+    [[nodiscard]] std::array<real_t, RANK_SIZE> rank() const;
 
     constexpr inline void order_values() {
         if (lower > modal)
@@ -104,7 +107,6 @@ consteval inline TriFuzzyNum crisp_number(real_t v) {
     return {v, v, v};
 }
 
-/** Compile-time only addition neutral element **/
+/** Compile-time only addition neutral element. **/
 constinit TriFuzzyNum crisp_zero{crisp_number(0)};
-
 #endif //FUZZYNUM_H

@@ -34,6 +34,8 @@ public:
 
 private:
     std::multiset<TriFuzzyNum> elements;
+
+    TriFuzzyNum sum() const;
 };
 
 #endif //FUZZYSET_H

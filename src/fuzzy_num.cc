@@ -33,7 +33,7 @@ std::ostream& operator<<(std::ostream& out, const TriFuzzyNum& num) {
     return out << '(' << num.lower << ", " << num.modal << ", " << num.upper << ')';
 }
 
-std::vector<real_t> TriFuzzyNum::rank() const {
+std::array<real_t, TriFuzzyNum::RANK_SIZE> TriFuzzyNum::rank() const {
     const real_t sqrt_um{sqrt(1 + (upper - modal) * (upper - modal))};
     const real_t sqrt_ml{sqrt(1 + (modal - lower) * (modal - lower))};
 
@@ -52,5 +52,5 @@ std::strong_ordering operator<=>(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs)
         return std::strong_ordering::less;
     else if (lhs_values > rhs_values)
         return std::strong_ordering::greater;
-    return std::strong_ordering::equal;
+    return std::strong_ordering::equivalent;
 }
