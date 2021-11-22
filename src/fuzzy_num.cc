@@ -41,7 +41,7 @@ std::array<real_t, TriFuzzyNum::RANK_SIZE> TriFuzzyNum::rank() const {
     real_t y = (upper - lower) / z;
     real_t x = ((upper - lower) * modal + sqrt_um * lower + sqrt_ml * upper) / z;
 
-    return {x, y, z};
+    return {x / 2, 1 - y, m};
 }
 
 std::strong_ordering operator<=>(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs) {
