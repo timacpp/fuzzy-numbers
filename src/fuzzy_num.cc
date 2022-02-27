@@ -1,17 +1,18 @@
-#include "fuzzy_num.h"
 #include <cmath>
 
+#include "fuzzy_num.h"
+
 TriFuzzyNum operator+(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs) {
-    return {lhs.lower + rhs.lower,lhs.modal + rhs.modal,lhs.upper + rhs.upper};
+    return {lhs.lower + rhs.lower, lhs.modal + rhs.modal, lhs.upper + rhs.upper};
 }
 
 TriFuzzyNum operator*(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs) {
-    return {lhs.lower * rhs.lower,lhs.modal * rhs.modal,lhs.upper * rhs.upper};
+    return {lhs.lower * rhs.lower, lhs.modal * rhs.modal, lhs.upper * rhs.upper};
 }
 
 TriFuzzyNum TriFuzzyNum::operator/(real_t divisor) const {
     if (divisor == 0) {
-        throw std::invalid_argument("Division by zero is illegal.");
+        throw std::invalid_argument("Sorry, division by zero machine is broken :(");
     }
 
     return {this->lower / divisor, this->modal / divisor, this->upper / divisor};

@@ -72,8 +72,6 @@ private:
 
     constexpr static size_t RANK_SIZE{3};
 
-    TriFuzzyNum operator-() const;
-
     /**
      * Computes the rank of a triangular fuzzy number.
      * It is required for the comparison of the numbers.
@@ -93,9 +91,7 @@ private:
 };
 
 constexpr inline bool operator==(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs) {
-    return lhs.lower == rhs.lower &&
-           lhs.modal == rhs.modal &&
-           lhs.upper == rhs.upper;
+    return lhs.lower == rhs.lower && lhs.modal == rhs.modal && lhs.upper == rhs.upper;
 }
 
 constexpr inline bool operator!=(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs) {

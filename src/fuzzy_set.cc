@@ -1,5 +1,6 @@
-#include "fuzzy_set.h"
 #include <numeric>
+
+#include "fuzzy_set.h"
 
 TriFuzzyNumSet::TriFuzzyNumSet(const std::initializer_list<TriFuzzyNum>& list)
         : elements{list} {}
@@ -32,5 +33,5 @@ TriFuzzyNumSet& TriFuzzyNumSet::operator=(TriFuzzyNumSet&& other) noexcept {
 }
 
 TriFuzzyNum TriFuzzyNumSet::sum() const {
-    return std::accumulate(elements.begin(),elements.end(), crisp_zero);
+    return std::accumulate(elements.begin(), elements.end(), crisp_zero);
 }
