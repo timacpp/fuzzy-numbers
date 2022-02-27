@@ -23,17 +23,7 @@ void TriFuzzyNumSet::remove(TriFuzzyNum number) {
 }
 
 TriFuzzyNum TriFuzzyNumSet::arithmetic_mean() {
-    if (elements.empty()) {
-        throw std::length_error("TriFuzzyNumSet::arithmetic_mean - the set is empty.");
-    }
-
-    const auto tri_div([](const TriFuzzyNum& num, size_t divisor) -> TriFuzzyNum {
-        return {num.lower_value() / divisor,
-                num.modal_value() / divisor,
-                num.upper_value() / divisor};
-    });
-
-    return tri_div(this->sum(), elements.size());
+    return this->sum() / static_cast<real_t>(elements.size());
 }
 
 TriFuzzyNumSet& TriFuzzyNumSet::operator=(TriFuzzyNumSet&& other) noexcept {

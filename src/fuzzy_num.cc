@@ -9,6 +9,14 @@ TriFuzzyNum operator*(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs) {
     return {lhs.lower * rhs.lower,lhs.modal * rhs.modal,lhs.upper * rhs.upper};
 }
 
+TriFuzzyNum TriFuzzyNum::operator/(real_t divisor) const {
+    if (divisor == 0) {
+        throw std::invalid_argument("Division by zero is illegal.");
+    }
+
+    return {this->lower / divisor, this->modal / divisor, this->upper / divisor};
+}
+
 TriFuzzyNum TriFuzzyNum::operator-() const {
     return (*this * crisp_number(-1));
 }
@@ -41,7 +49,7 @@ std::array<real_t, TriFuzzyNum::RANK_SIZE> TriFuzzyNum::rank() const {
     real_t y = (upper - lower) / z;
     real_t x = ((upper - lower) * modal + sqrt_um * lower + sqrt_ml * upper) / z;
 
-    return {x / 2, 1 - y, m};
+    return {x / 2, 1 - y, modal};
 }
 
 std::strong_ordering operator<=>(const TriFuzzyNum& lhs, const TriFuzzyNum& rhs) {

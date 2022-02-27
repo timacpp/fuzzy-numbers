@@ -17,6 +17,5 @@ add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
 set(NUM_FILES src/fuzzy_num.cc src/fuzzy_num.h)
 set(SET_FILES src/fuzzy_set.h src/fuzzy_set.cc)
 
-add_executable(num_test test/num_test.cc ${NUM_FILES})
-add_executable(set_test test/set_test.cc ${SET_FILES})
-add_executable(simple_test test/simple_test.cc ${NUM_FILES} ${SET_FILES})
+add_executable(num_test test/fuzzy_test.cc ${NUM_FILES})
+add_executable(example example/fuzzy_example.cc ${NUM_FILES} ${SET_FILES})

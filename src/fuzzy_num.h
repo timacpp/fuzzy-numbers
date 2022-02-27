@@ -43,6 +43,10 @@ public:
 
     friend TriFuzzyNum operator*(const TriFuzzyNum&, const TriFuzzyNum&);
 
+    TriFuzzyNum operator-() const;
+
+    TriFuzzyNum operator/(real_t) const;
+
     TriFuzzyNum& operator=(const TriFuzzyNum&) = default;
 
     TriFuzzyNum& operator=(TriFuzzyNum&&) = default;
@@ -109,4 +113,5 @@ consteval inline TriFuzzyNum crisp_number(real_t v) {
 
 /** Compile-time only addition neutral element. **/
 constinit TriFuzzyNum crisp_zero{crisp_number(0)};
+
 #endif //FUZZYNUM_H
