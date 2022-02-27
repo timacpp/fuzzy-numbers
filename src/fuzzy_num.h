@@ -108,6 +108,6 @@ consteval inline TriFuzzyNum crisp_number(real_t v) {
 }
 
 /** Compile-time only addition neutral element. **/
-constinit TriFuzzyNum crisp_zero{crisp_number(0)};
+constinit inline TriFuzzyNum crisp_zero{crisp_number(0)};
 
 #endif //FUZZYNUM_H
